@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Open Source Topics — Full Detailed</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<style>
+:root{
+  --accent:#1e88e5;
+  --card:#ffffff;
+  --bg:#eef7ff;
+  --text:#123145;
+  --muted:#475b6a;
+}
+body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:var(--text);}
+.container{max-width:900px;margin:20px auto;padding:16px;}
+header{text-align:center;margin-bottom:20px;}
+h1{margin:0;color:#07395f;}
+.card{background:var(--card);border-left:8px solid var(--accent);border-radius:10px;box-shadow:0 6px 18px rgba(12,40,60,0.08);padding:16px;margin:14px 0;cursor:pointer;display:flex;align-items:center;gap:12px;transition:all 0.3s ease;}
+.card:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 12px 28px rgba(12,40,60,0.2);}
+.card h2{margin:0;display:flex;align-items:center;gap:8px;color:var(--accent);}
+.page{display:none;opacity:0;transition:opacity 0.6s ease;}
+.page.active{display:block;opacity:1;}
+.detail{background:var(--card);padding:20px;border-radius:10px;box-shadow:0 6px 18px rgba(12,40,60,0.06);transform:translateY(10px);transition:all 0.5s ease, opacity 0.6s ease;}
+.page.active .detail{transform:translateY(0);opacity:1;}
+.detail h2{display:flex;align-items:center;gap:10px;margin-top:0;color:var(--accent);}
+.detail p, .detail ul{line-height:1.7;color:#203543;margin:14px 0;opacity:0;transform:translateY(20px);transition:opacity 0.6s ease, transform 0.6s ease;}
+.detail.active p, .detail.active ul{opacity:1;transform:translateY(0);}
+.detail ul{margin-left:20px;}
+.controls{margin-top:16px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap;}
+button{padding:10px 14px;border:none;border-radius:8px;font-weight:600;cursor:pointer;transition:all 0.2s ease;}
+button.btn{background:var(--accent);color:white;}
+button.btn:hover{background:#1565c0;transform:scale(1.05);}
+button.link{background:transparent;color:var(--accent);}
+button.link:hover{color:#1565c0;}
+i.icon{font-size:28px;color:var(--accent);}
+@media (max-width:520px){i.icon{font-size:24px;}}
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>Open Source Topics</h1>
+    <p>Click a topic to read full detailed explanations with history, examples, real-world impact, and practical uses.</p>
+  </header>
+
+  <!-- Home List -->
+  <section id="home" class="page active">
+    <div class="card" onclick="openTopic('t1')"><i class="fas fa-code icon"></i><h2>1. Introduction of Open Source</h2></div>
+    <div class="card" onclick="openTopic('t2')"><i class="fas fa-desktop icon"></i><h2>2. Popular Open Source Desktop Applications</h2></div>
+    <div class="card" onclick="openTopic('t3')"><i class="fas fa-globe icon"></i><h2>3. Open Source Web Technologies and Frameworks</h2></div>
+    <div class="card" onclick="openTopic('t4')"><i class="fas fa-mobile-alt icon"></i><h2>4. Open Source Mobile Applications</h2></div>
+    <div class="card" onclick="openTopic('t5')"><i class="fas fa-server icon"></i><h2>5. Open Source Operating Systems</h2></div>
+    <div class="card" onclick="openTopic('t6')"><i class="fas fa-thumbs-up icon"></i><h2>6. Benefits of Open Source</h2></div>
+    <div class="card" onclick="openTopic('t7')"><i class="fas fa-file-contract icon"></i><h2>7. Open Source Licenses</h2></div>
+  </section>
+
+  <!-- Topic 1 -->
+  <section id="t1" class="page">
+    <div class="detail">
+      <h2><i class="fas fa-code icon"></i>1. Introduction of Open Source</h2>
+      <p>Open source software is software whose source code is freely available for anyone to view, modify, and redistribute. It promotes collaboration, transparency, and shared ownership.</p>
+      <p><strong>History:</strong> Open source started in academic and hobbyist communities in the 1970s–1980s. The GNU Project (1983) and Linux kernel (1991) popularized the open source movement globally.</p>
+      <p><strong>Principles:</strong> Freedom to study, modify, and redistribute software. Projects follow community governance or meritocracy.</p>
+      <p><strong>Practical Examples:</strong> Linux kernel, Apache server, Firefox, Python.</p>
+      <p><strong>Impact:</strong> Faster innovation, cost-effective, secure, foundation for modern tech ecosystems.</p>
+      <p><strong>Real-world Cases:</strong> Companies like Google, IBM, and Red Hat contribute to Linux and other projects, benefiting both community and business.</p>
+      <div class="controls">
+        <button class="btn" onclick="goBack()">Back</button>
+        <button class="link" onclick="openTopic('t2')">Next →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Topic 2 -->
+  <section id="t2" class="page">
+    <div class="detail">
+      <h2><i class="fas fa-desktop icon"></i>2. Popular Open Source Desktop Applications</h2>
+      <p>Open source desktop applications provide alternatives to proprietary software, widely used in education, businesses, and personal productivity.</p>
+      <ul>
+        <li><strong>LibreOffice:</strong> Office suite compatible with MS Office, used globally in schools and businesses.</li>
+        <li><strong>GIMP:</strong> Image editing software for professional design, photo editing, and graphic creation.</li>
+        <li><strong>VLC Media Player:</strong> Supports almost all audio/video formats; cross-platform.</li>
+        <li><strong>Audacity:</strong> Audio recording and editing software, popular among podcasters and musicians.</li>
+      </ul>
+      <p><strong>Benefits:</strong> Avoid licensing fees, customize features, contribute to community projects.</p>
+      <p><strong>Real-world Use:</strong> Schools and small businesses use LibreOffice to reduce costs, businesses extend open source apps for internal workflows.</p>
+      <div class="controls">
+        <button class="btn" onclick="goBack()">Back</button>
+        <button class="link" onclick="openTopic('t3')">Next →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Topic 3 -->
+  <section id="t3" class="page">
+    <div class="detail">
+      <h2><i class="fas fa-globe icon"></i>3. Open Source Web Technologies and Frameworks</h2>
+      <p><strong>Overview:</strong> Web development relies heavily on open source frameworks and libraries. They enable building scalable, maintainable, and interactive web applications.</p>
+      <p><strong>History:</strong> jQuery, Prototype, Angular, React, and Vue.js shaped modern web development. The early 2000s brought dynamic websites and rich client-side applications.</p>
+      <p><strong>Frontend:</strong> React, Angular, Vue.js allow component-based UI for maintainable and reusable code. Maintained by global communities for long-term support.</p>
+      <p><strong>Backend:</strong> Node.js, Django, Ruby on Rails, Laravel allow server-side processing, database integration, and scalable architecture.</p>
+      <p><strong>Package Managers:</strong> npm, yarn manage libraries and dependencies for faster development and better standardization.</p>
+      <p><strong>Advantages:</strong> Transparency, security, adaptability, and community-driven improvements.</p>
+      <p><strong>Real-world Examples:</strong> React (Facebook, Instagram), WordPress (40% of websites) uses open source libraries and plugins.</p>
+      <div class="controls">
+        <button class="btn" onclick="goBack()">Back</button>
+        <button class="link" onclick="openTopic('t4')">Next →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Topic 4 -->
+  <section id="t4" class="page">
+    <div class="detail">
+      <h2><i class="fas fa-mobile-alt icon"></i>4. Open Source Mobile Applications</h2>
+      <p>Open source mobile apps prioritize privacy, transparency, and community-driven improvements.</p>
+      <p><strong>History:</strong> Android OS and FOSS movement extended open source software to mobile platforms.</p>
+      <ul>
+        <li><strong>Signal:</strong> Secure messaging app with end-to-end encryption.</li>
+        <li><strong>F-Droid:</strong> Repository of free and open source Android apps.</li>
+        <li><strong>Firefox Mobile:</strong> Community-reviewed, privacy-focused browser.</li>
+      </ul>
+      <p><strong>Enterprise Use:</strong> Organizations can deploy custom versions internally, enhancing privacy and workflow efficiency.</p>
+      <p><strong>Impact:</strong> Encourages secure, customizable, and privacy-respecting mobile applications.</p>
+      <div class="controls">
+        <button class="btn" onclick="goBack()">Back</button>
+        <button class="link" onclick="openTopic('t5')">Next →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Topic 5 -->
+  <section id="t5" class="page">
+    <div class="detail">
+      <h2><i class="fas fa-server icon"></i>5. Open Source Operating Systems</h2>
+      <p><strong>Overview:</strong> Linux and other open source OSs provide adaptable platforms for servers, desktops, embedded devices, and mobile.</p>
+      <p><strong>History:</strong> Linux kernel (1991) enabled distributions targeting various devices.</p>
+      <ul>
+        <li>Ubuntu, Debian: Beginner-friendly, stable.</li>
+        <li>Fedora, Arch Linux: Cutting-edge, developer-focused.</li>
+        <li>CentOS, Rocky Linux: Enterprise-grade stability.</li>
+      </ul>
+      <p><strong>Applications:</strong> Servers, cloud infrastructure, supercomputers, IoT, Android.</p>
+      <p><strong>Benefits:</strong> Auditable, modifiable, cost-effective, community-driven support.</p>
+      <p><strong>Real-world Example:</strong> Android OS, AWS/Google Cloud servers use Linux extensively.</p>
+      <div class="controls">
+        <button class="btn" onclick="goBack()">Back</button>
+        <button class="link" onclick="openTopic('t6')">Next →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Topic 6 -->
+  <section id="t6" class="page">
+    <div class="detail">
+      <h2><i class="fas fa-thumbs-up icon"></i>6. Benefits of Open Source</h2>
+      <p><strong>Transparency:</strong> Inspect code, detect bugs, and ensure security.</p>
+      <p><strong>Cost-effectiveness:</strong> Freely available, reduce licensing costs.</p>
+      <p><strong>Innovation:</strong> Build on existing solutions, improve interoperability.</p>
+      <p><strong>Collaboration:</strong> Global contributors enhance software quality.</p>
+      <p><strong>Resilience:</strong> Forks or new maintainers ensure project survival.</p>
+      <p><strong>Education:</strong> Learn real-world software engineering practices.</p>
+      <p><strong>Example:</strong> IBM, Red Hat, Google contribute and benefit commercially.</p>
+      <div class="controls">
+        <button class="btn" onclick="goBack()">Back</button>
+        <button class="link" onclick="openTopic('t7')">Next →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Topic 7 -->
+  <section id="t7" class="page">
+    <div class="detail">
+      <h2><i class="fas fa-file-contract icon"></i>7. Open Source Licenses</h2>
+      <p><strong>Overview:</strong> Licenses define how software can be used, modified, and shared, ensuring legal clarity.</p>
+      <p><strong>History:</strong> Early projects had no licenses. GNU GPL (1989) introduced copyleft.</p>
+      <ul>
+        <li>Permissive: MIT, BSD, Apache — minimal restrictions, commercial-friendly.</li>
+        <li>Copyleft: GPL — derivatives remain open source.</li>
+        <li>Other: LGPL, MPL, Creative Commons (docs/media).</li>
+      </ul>
+      <p><strong>Advice:</strong> Check compatibility when combining components to avoid legal conflicts.</p>
+      <p><strong>Examples:</strong> Linux kernel uses GPL, Apache server uses Apache License, React uses MIT.</p>
+      <div class="controls">
+        <button class="btn" onclick="goBack()">Back</button>
+        <button class="link" onclick="openTopic('t1')">Start →</button>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+function openTopic(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  const page = document.getElementById(id);
+  page.classList.add('active');
+  const details = page.querySelector('.detail');
+  details.classList.remove('active');
+  setTimeout(()=>details.classList.add('active'),50);
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function goBack(){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('home').classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+</body>
+</html>
